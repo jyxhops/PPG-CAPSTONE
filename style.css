@@ -310,6 +310,12 @@ input, select {
 .btn-outline { background: transparent; border: 1px solid #64748b; color: inherit; }
 .btn-danger { background: var(--danger); color: #fff; }
 
+.action-group {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
 /* Tables & Lists */
 .table-responsive {
   overflow-x: auto;
@@ -374,10 +380,4 @@ th, td {
 @media (max-width: 768px) {
   .app-layout { flex-direction: column; }
   .sidebar { width: 100%; }
-
-  .action-group {
-  display: flex;
-  gap: 0.4rem;
-  align-items: center;
-}
 }

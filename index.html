@@ -35,37 +35,6 @@
         <p class="demo-hint">Demo account: <strong>student@gnc.edu.ph</strong> / <strong>123456</strong></p>
       </form>
 
-      <!-- Inside #register-form in index.html -->
-<form id="register-form" class="auth-form hidden">
-  <div class="form-group">
-    <label for="reg-name">Full Name</label>
-    <input type="text" id="reg-name" placeholder="Juan Dela Cruz" required />
-  </div>
-  <div class="form-group">
-    <label for="reg-email">Student Email</label>
-    <input type="email" id="reg-email" placeholder="student@gnc.edu.ph" required />
-  </div>
-  <div class="form-group">
-    <label for="reg-password">Password</label>
-    <input type="password" id="reg-password" placeholder="Min. 6 characters" minlength="6" required />
-  </div>
-  <div class="form-group">
-    <label for="reg-invite-code">Registration Security Code (if required)</label>
-    <input type="text" id="reg-invite-code" placeholder="Optional or Admin Code" />
-  </div>
-  <p class="demo-hint">New accounts require administrator acceptance before logging in.</p>
-  <button type="submit" class="btn btn-primary btn-block">Request Account</button>
-</form>
-
-<!-- Add inside #view-dashboard in index.html -->
-<div class="card" id="pending-approvals-card">
-  <div class="card-header">
-    <h3>🛡️ Pending Account Registrations</h3>
-    <span id="pending-count-badge" class="badge">0 Pending</span>
-  </div>
-  <ul id="pending-registrations-list" class="clean-list"></ul>
-</div>
-
       <!-- Register Form -->
       <form id="register-form" class="auth-form hidden">
         <div class="form-group">
@@ -78,9 +47,14 @@
         </div>
         <div class="form-group">
           <label for="reg-password">Password</label>
-          <input type="password" id="reg-password" placeholder="Create password" required />
+          <input type="password" id="reg-password" placeholder="Min. 6 characters" minlength="6" required />
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+        <div class="form-group">
+          <label for="reg-invite-code">Registration Security Code (if required)</label>
+          <input type="text" id="reg-invite-code" placeholder="Optional or Admin Code" />
+        </div>
+        <p class="demo-hint">New accounts require administrator acceptance before logging in.</p>
+        <button type="submit" class="btn btn-primary btn-block">Request Account</button>
       </form>
     </div>
   </section>
@@ -119,6 +93,15 @@
       <section id="view-dashboard" class="view-section">
         <!-- Deadline Alert Banner -->
         <div id="deadline-alert" class="alert-banner hidden"></div>
+
+        <!-- Pending Account Registrations -->
+        <div class="card" id="pending-approvals-card">
+          <div class="card-header">
+            <h3>🛡️ Pending Account Registrations</h3>
+            <span id="pending-count-badge" class="badge">0 Pending</span>
+          </div>
+          <ul id="pending-registrations-list" class="clean-list"></ul>
+        </div>
 
         <!-- Progress Statistics -->
         <div class="stats-grid">
